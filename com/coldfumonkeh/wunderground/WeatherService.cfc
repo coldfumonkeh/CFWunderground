@@ -1,7 +1,7 @@
 /**
 *
-* @file  WeatherService.cfc
-* @author  Original programming by Matt Gifford aka coldfumonkeh (http://www.mattgifford.co.uk), Service rewrite by Denard Springle (http://blog.vsgcom.net/)
+* @file  Weather.cfc
+* @author  Original programming by Matt Gifford aka coldfumonkeh (http://www.mattgifford.co.uk), Rewrite by Denard Springle (http://blog.vsgcom.net/)
 * @description I am an API wrapper for the Weather Underground API (http://www.wunderground.com/weather/api)
 *
 */
@@ -10,7 +10,7 @@ component output="false" displayname="weather" accessors="true"  {
 
 	property apiKey;
 
-	public any function init( string apiKey ) {
+	public any function init( string apiKey = '') {
 		setApiKey( arguments.apiKey );
 		return this;
 	}
